@@ -1,0 +1,235 @@
+body {
+    background-image: url("img/3.jpg");
+
+}
+
+.header{
+    color: beige;
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-align: center;
+}
+
+.card{
+    height:300px;
+    width:300px;
+    position:relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+    box-shadow:rgba(0,0,0,0.5) 4px 4px 16px;
+    overflow:hidden;
+    margin-left:30px;
+    cursor:pointer;
+    background-color: beige;
+    border: darkkhaki;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 20px;
+}
+
+.row {
+    margin: 0 -05px;
+}
+
+.cart-btn {
+    background-color: white;
+    color: black;
+    padding: 16px 20px;
+    border: 2px solid darkkhaki;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: auto;
+    right: 28px;
+    width: 250px;
+}
+.cart-btn:hover {
+    background-color: brown;
+    color: white;
+}
+
+.button2 {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    padding: 16px 20px;
+    border: 2px solid darkkhaki;
+    cursor: pointer;
+    opacity: 0.8;
+    bottom: 23px;
+    right: 28px;
+    width: 250px;
+}
+
+.button2:hover {
+    background-color: brown;
+    color: white;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+
+.popAddToCart-btn {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    padding: 16px 20px;
+    border: 2px solid darkkhaki;
+    cursor: pointer;
+    bottom: 190px;
+    right: auto;
+    width: 250px;
+    z-index: 960;
+    position: absolute;
+
+}
+
+.popAddToCart-btn:hover {
+    background-color: brown;
+    color: white;
+}
+
+.button3 {
+    background-color: white;
+    color: black;
+    border: 2px solid darkkhaki;
+    top:15%;
+    left:91%;
+    width:100px;
+    height:40px;
+    position: absolute;
+    z-index: 2;
+    transition-duration: 0.5s;
+}
+.button3:hover {
+    background-color: brown;
+    color: white;
+}
+
+.popUpDisplay{
+    height:100%;
+    width:100%;
+    background-color:rgba(193, 193, 193, 0.66);
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index: 950;
+}
+
+img{
+    float: left;
+    width:  248px;
+    height: 150px;
+    object-fit: scale-down;
+}
+
+.hide{
+    display:none;
+}
+
+.Fender{
+    background-color : red;
+}
+
+.Yamaha{
+    background-color : green;
+}
+
+.Maton{
+    background-color : blue;
+}
+
+.emptyStore{
+    font-family: fantasy;
+    color: beige;
+    font-size: xxx-large;
+    text-align: center;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.openMenuButton {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    padding: 16px 20px;
+    border: 2px solid darkkhaki;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 250px;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid black;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: max-content;
+    padding: 15px;
+    border-color: black;
+    background-color: beige;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: brown;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+.form-container .btn:hover, .openMenuButton:hover {
+    opacity: 1;
+    background-color: brown;
+    color: white;
+}

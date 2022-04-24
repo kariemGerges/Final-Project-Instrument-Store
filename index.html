@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Project Instrument Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="header">The Music Store </h1>
+
+<div id="Instrument-Store" class="row">
+    <div v-for="(inst, i) in instruments">
+        <div  v-bind:id="'card'+i">
+            <div class="card column"
+                 @mouseover="inst.hover = true"
+                 @mouseleave="inst.hover = false"
+                 v-bind:class="[inst.hover ? inst.brand : '']"
+            >
+                    <div>
+                        <div>
+                            <img v-if="inst.img" v-bind:src="inst.img">
+                        </div>
+                        <div @click="inst.popUp = !inst.popUp"
+                             :class="{'popUpDisplay' : inst.popUp}"
+                        >
+                            <pop-up-menu :class="{'popUpDisplay' : inst.popUp}"
+                                    v-bind:name="inst.name"
+                                    v-bind:price="inst.price"
+                                    v-bind:brand="inst.brand"
+                            ></pop-up-menu>
+                            <button :class="{'hide' : !inst.popUp}"
+                                    class="popAddToCart-btn"
+                                    @click="addToCart(i)"
+                            >Add to Cart
+                            </button>
+                        </div>
+                        <div>
+                            <button class="button2" @click="addToCart(i)">Add to Cart</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!--    add inst-->
+    <button class="openMenuButton" @click="openAddInstMenu">
+        Add Instrument
+    </button>
+    <div class="form-popup" id="myForm">
+        <div class="form-container">
+            <h1>Add new Instrument</h1>
+                <input type="text" v-model="form.name" required placeholder="Instrument name">
+                <input type="text" v-model="form.type" required placeholder="Instrument type">
+            <div>
+                <input type="radio" name="brand" value="Fender" v-model="form.brand">Fender
+                <input type="radio" name="brand" value="Yamaha" v-model="form.brand">Yamaha
+                <input type="radio" name="brand" value="Maton" v-model="form.brand">Maton
+            </div>
+            <button type="submit" class="btn" @click="addInst" >Add</button>
+            <button type="button" class="btn cancel" @click="closeAddInstMenu">Close</button>
+        </div>
+    </div>
+        <div v-for="(items, i) in inCart">
+            <button class="cart-btn" @click="addToStore()">
+                My Cart<br>
+                Total items:
+                {{i+1}}
+                        </button>
+                            </div>
+                        <div class="emptyStore">{{storeMess}}{{cartMess}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
